@@ -21,7 +21,7 @@ body {
     padding: 10px;
 }
 
-/*USING LINE NUMBERS*/
+/*METHOD: 1 LINE NUMBERS*/
 
 /*
 .container {
@@ -49,8 +49,8 @@ body {
 }
 */
 
-/*USING LINE NAMES*/
-.container {
+/*METHOD 2: LINE NAMES*/
+/* .container {
     grid-template-rows: [header-start] 1fr 
                         [header-end boxes-start] 2fr 
                         [boxes-end main-start] 4fr 
@@ -71,4 +71,37 @@ body {
 
 .main {
     grid-column: col-start 1/ col-end 3;
+} */
+
+/*METHOD 3: AREA NAMES*/
+.container {
+    margin: 20px auto;
+    width: 1000px;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr 1fr;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 30px;
+
+    grid-template-areas: "head head head head"
+                         "box box box side"
+                         "main main main side"
+                         "foot foot foot foot";
+}
+
+
+.header {
+    grid-area: head;
+}
+
+.sidebar {
+    grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: foot;
 }

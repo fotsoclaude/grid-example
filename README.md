@@ -35,7 +35,10 @@ Disclaimer : Rows and columns are starting at 1
 .sidebar {
     /*The item start at the row 2 and end at 4, so it will extends on 2 rows*/
     grid-row: 2/4;
-    /*The item start at the column 4 and end at 5. This is added to avoid the position of the item at the beginning of the row*/
+    /*
+    The item start at the column 4 and end at 5. 
+    This is added to avoid the position of the item at the beginning of the row
+    */
     grid-column: 4/5;
 }
 ```
@@ -53,12 +56,14 @@ Disclaimer : Rows and columns are starting at 1
                         [footer-end];
 
 
-    /*When using repeat(), this will automatically create a nameset 
+    /*
+    When using repeat(), this will automatically create a nameset 
     "col-start 1" & "col-end 1" for the first,
     "col-start 2" & "col-end 2" for the seciond,
     "col-start 3" & "col-end 3" for the third 
     ...
-    to avoid conflicting names*/
+    to avoid conflicting names
+    */
     grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px;
 }
 
@@ -72,3 +77,34 @@ We can now use those name to position our items
     grid-column: col-end 3/ grid-end;
 }
 ```
+
+### Using area name
+```css
+.container {
+    /*initialization*/
+    display: grid;
+
+    grid-template-rows: 1fr 2fr 4fr 1fr;
+    grid-template-columns: repeat(3, 1fr) 200px;
+
+    /*
+    We define an area template by positionning a reference or keyword according to the area position
+    A string is a row and each keyword a coloumn
+
+    Examples : 
+    
+    * The header is the four columns of the first row so we write its keyword 4 times in the first string which represents the first row
+    
+    * The sidebar is on the last column of both the 2nd and 3rd column, so we write its keyword twice at the end of both the 2nd and 3rd string.
+    */
+
+    grid-template-areas: "head head head head"
+                         "box box box side"
+                         "main main main side"
+                         "foot foot foot foot";
+
+
+    /*
+    On each element we add the property grid-area and give it the keyword according to the positon in our template
+    */
+}
