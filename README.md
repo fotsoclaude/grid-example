@@ -91,6 +91,8 @@ We can now use those name to position our items
     We define an area template by positionning a reference or keyword according to the area position
     A string is a row and each keyword a coloumn
 
+    To define an empty space in our layout we just place a dot as keyword
+
     Examples : 
     
     * The header is the four columns of the first row so we write its keyword 4 times in the first string which represents the first row
@@ -99,12 +101,14 @@ We can now use those name to position our items
     */
 
     grid-template-areas: "head head head head"
-                         "box box box side"
+                         "box-1 box-2 box-3 side"
                          "main main main side"
                          "foot foot foot foot";
+}
 
-
-    /*
-    On each element we add the property grid-area and give it the keyword according to the positon in our template
-    */
+/*
+On each element we add the property grid-area and give it the keyword according to the positon in our template
+*/
+.sidebar {
+    grid-area: side;
 }
