@@ -1,0 +1,38 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 20px auto;
+    width: 1000px;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr 1fr;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 30px;
+}
+
+.container > * {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+}
+
+.header, .footer {
+    grid-column: 1/5;
+}
+
+.sidebar {
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+
+.main {
+    grid-column: 1/4;
+}
