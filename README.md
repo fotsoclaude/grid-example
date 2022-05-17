@@ -1,6 +1,6 @@
 # A layout using css grid
 
-![Résultat](https://github.com/fotsoclaude/blob/main/result.png "Résultat")
+![Résultat](https://github.com/fotsoclaude/grid-example/blob/main/result.png)
 
 ## Usage of grid in CSS
 
