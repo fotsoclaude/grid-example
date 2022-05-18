@@ -117,10 +117,34 @@ On each element we add the property grid-area and give it the keyword according 
 
 ```css
 .conainer {
-    /*Align items throw the cross-axis*/
+    /*Align items vertically*/
     align-items: center; /* stretch | center | end | start */
-    /*Align items throw the main-axis*/
-    justify-items: center; /* stretch | center | end | start */
+    /*Align items horizontally*/
+    justify-items: center;
+}
+
+.item {
+    /*Overwirte the global state for this item in the grid*/
+    align-self: start;
+    justify-self: end;
+}
+
+```
+
+### Align Tracks
+
+```css
+.conainer {
+    /*Align tracks vertically*/
+    align-content: center; /* space-around | space-between | space-evently | center | end | start */
+    /*Align tracks horizontally*/
+    justify-content: center;
+}
+
+.item {
+    /*Overwirte the global state for this item in the grid*/
+    align-self: start;
+    justify-self: end;
 }
 
 ```
