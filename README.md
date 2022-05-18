@@ -112,7 +112,7 @@ On each element we add the property grid-area and give it the keyword according 
 .sidebar {
     grid-area: side;
 }
-
+```
 ### Align Grid items
 
 ```css
@@ -140,7 +140,6 @@ On each element we add the property grid-area and give it the keyword according 
     /*Align tracks horizontally*/
     justify-content: center;
 }
-
 ```
 
 ### Manage extra content
@@ -159,5 +158,4 @@ In some case you can have a implicit grid due to the overlapping content. To aut
     */
     grid-auto-flow: row dense; 
 }
-
 ```
