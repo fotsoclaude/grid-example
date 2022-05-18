@@ -112,3 +112,15 @@ On each element we add the property grid-area and give it the keyword according 
 .sidebar {
     grid-area: side;
 }
+
+### Align Grid items
+
+```css
+.conainer {
+    /*Align items throw the cross-axis*/
+    align-items: center; /* stretch | center | end | start */
+    /*Align items throw the main-axis*/
+    justify-items: center; /* stretch | center | end | start */
+}
+
+```
