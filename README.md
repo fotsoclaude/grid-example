@@ -124,7 +124,7 @@ On each element we add the property grid-area and give it the keyword according 
 }
 
 .item {
-    /*Overwirte the global state for this item in the grid*/
+    /*Override the global state for this item in the grid*/
     align-self: start;
     justify-self: end;
 }
