@@ -141,10 +141,23 @@ On each element we add the property grid-area and give it the keyword according 
     justify-content: center;
 }
 
-.item {
-    /*Overwirte the global state for this item in the grid*/
-    align-self: start;
-    justify-self: end;
+```
+
+### Manage extra content
+
+In some case you can have a implicit grid due to the overlapping content. To automatically place it according to your design you can use 
+
+```css
+.container {
+    /*Define the size of the extra content*/
+    grid-auto-columns: .5fr;
+    grid-auto-rows: 80px;
+
+    /*
+    Define the direction of the extra content either row or column 
+    The keyword 'dense' is to avoid empty area which is the default behavior
+    */
+    grid-auto-flow: row dense; 
 }
 
 ```
